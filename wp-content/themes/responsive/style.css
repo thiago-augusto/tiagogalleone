@@ -54,7 +54,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 body {
-	line-height: 1;
+	line-height: 1;	
 }
 
 ol, ul {
@@ -116,12 +116,19 @@ body {
 	-webkit-font-smoothing: antialiased;
 	background: #efefef;
 	color: #404040;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Georgia, Helvetica, sans-serif;
 	font-size: 14px;
 	font-smoothing: antialiased;
 	line-height: 1.5em;
 	text-rendering: optimizeLegibility;
 }
+
+@font-face {
+	font-family: 'Ithornët';
+	src: url('fonts/ithornt.ttf');
+	src: local('ithornt.ttf'), url('fonts/ithornt.ttf') format('truetype');
+}
+
 
 /* =Typography
 -------------------------------------------------------------- */
@@ -329,14 +336,14 @@ object {
 /* =Links
 -------------------------------------------------------------- */
 a {
-	color: #06c;
+	color: #550000;
 	font-weight: 400;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #444;
-	text-decoration: none;
+	color: #550000;
+	text-decoration: underline;
 }
 
 ::selection {
@@ -1220,14 +1227,17 @@ form div {
 }
 
 #header {
-	margin: 0;
+	margin: 0;    	
+    background: url(images/tiago-galleone.png) no-repeat top right;
 }
 
 #footer {
 	clear: both;
 	margin: 0 auto;
 	max-width: 960px;
-	padding: 0 25px 0 25px;
+	padding: 10px 25px 0 25px;	
+	background: #323232;
+	box-shadow: 0 -12px 5px -8px #000;
 }
 
 #footer-wrapper {
@@ -1239,7 +1249,7 @@ form div {
 -------------------------------------------------------------- */
 #logo {
 	float: left;
-	margin: 0;
+	margin: 30px 0;	
 }
 
 .site-name {
@@ -1261,7 +1271,7 @@ form div {
 /* =Content
 -------------------------------------------------------------- */
 #content {
-	margin-bottom: 20px;
+	margin-bottom: 20px;	
 }
 
 #content-full {
@@ -1333,11 +1343,11 @@ form div {
 /* =Featured Content
 -------------------------------------------------------------- */
 #featured {
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	background-color: #fff;
-	border: 1px solid #d6d6d6;
-	border-radius: 6px;
+	/*-moz-border-radius: 6px;*/
+	/*-webkit-border-radius: 6px;*/
+	background-color: transparent;
+	/*border: 1px solid #d6d6d6;*/
+	/*border-radius: 6px;*/
 	padding-bottom: 40px;
 	width: 99.893617021277%;
 }
@@ -1364,8 +1374,16 @@ form div {
 
 /* =Post
 -------------------------------------------------------------- */
+
+#content .post {
+	border: 2px solid #444;
+	background: #F0EDE6;
+	padding: 0 20px;
+	margin-bottom: 40px;
+}
+
 .comments-link {
-	font-size: 12px;
+	font-size: 12px;		
 }
 
 #cancel-comment-reply-link {
@@ -1375,12 +1393,14 @@ form div {
 .post-data {
 	clear: both;
 	font-size: 11px;
-	font-weight: 700;
-	margin-top: 20px;
+	font-weight: 700;	
+	width: 90%;
+	margin: 0 auto;
+	text-align: right;
 }
 
 .post-data a {
-	color: #111;
+	color: #550000;
 }
 
 .post-entry {
@@ -1389,9 +1409,34 @@ form div {
 
 .post-meta {
 	clear: both;
-	color: #9f9f9f;
-	font-size: 13px;
-	margin-bottom: 10px;
+	color: #fff;
+	letter-spacing: 0.08em;
+	text-shadow: 1px 1px 0 #000;
+	font-size: 13px;	
+	background: #333;
+	padding: 5px 15px;
+	box-shadow: 0 12px 5px -9px #000;
+	width: 90%;
+	margin: 0 auto;
+	text-align: right;
+	position: relative;
+	top: -15px	
+}
+
+.post-meta a{
+	color: #fff;
+}
+
+.post-title{
+	color: #444;	
+}
+
+.post-title a{
+	color: #444;	
+}
+
+.post-title a:hover{
+	color: #323232;	
 }
 
 .post-edit {
@@ -1638,16 +1683,17 @@ form div {
 
 /* =Primary Menu
 -------------------------------------------------------------- */
+
 .menu {
-	background-color: #585858;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#585858), to(#3d3d3d));
-	background-image: -webkit-linear-gradient(top, #585858, #3d3d3d);
-	background-image: -moz-linear-gradient(top, #585858, #3d3d3d);
-	background-image: -ms-linear-gradient(top, #585858, #3d3d3d);
-	background-image: -o-linear-gradient(top, #585858, #3d3d3d);
-	background-image: linear-gradient(top, #585858, #3d3d3d);
+	background-color: #323232;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#323232), to(#3d3d3d));
+	background-image: -webkit-linear-gradient(top, #323232, #3d3d3d);
+	background-image: -moz-linear-gradient(top, #323232, #3d3d3d);
+	background-image: -ms-linear-gradient(top, #323232, #3d3d3d);
+	background-image: -o-linear-gradient(top, #323232, #3d3d3d);
+	background-image: linear-gradient(top, #323232, #3d3d3d);
 	clear: both;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#585858, endColorstr=#3d3d3d);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#323232, endColorstr=#3d3d3d);
 	margin: 0 auto;
 }
 
@@ -1657,6 +1703,7 @@ form div {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	border-radius: 6px;
 }
 
 .menu li {
@@ -1733,7 +1780,7 @@ form div {
 }
 
 .menu a {
-	border-left: 1px solid #585858;
+	border-left: 1px solid #323232;
 	color: #fff;
     cursor: pointer;
 	display: block;
@@ -1742,7 +1789,7 @@ form div {
 	height: 45px;
 	line-height: 45px;
 	margin: 0;
-	padding: 0 0.9em;
+	padding: 0 2em;
 	position: relative;
 	text-decoration: none;
 	text-shadow: 0 1px 1px #242424;
@@ -2420,13 +2467,14 @@ table.cart td.actions .coupon .input-text {
 /* =Footer
 -------------------------------------------------------------- */
 #footer {
-	color: #333;
+	color: #fff;
 	font-size: 11px;
 	line-height: 1.5em;
+/*	background: #444 url(images/bg-footer.png) no-repeat center top;*/
 }
 
 #footer a {
-	color: #333;
+	color: #fff;
 	font-weight: 400;
 }
 
@@ -2602,6 +2650,8 @@ BDO[DIR="rtl"] {
     .home .top-widget {
         margin-top: 0 !important;
     }
+
+
     
 }
 
@@ -2609,10 +2659,13 @@ BDO[DIR="rtl"] {
 
     body {}
 
+    #header {background: none;}
+    
     #logo {
 	    float: none;
         margin: 0;
 	    text-align: center;
+	    margin: 30px 0
     }
 
     .grid, 
@@ -2687,9 +2740,12 @@ BDO[DIR="rtl"] {
 
     body {}
 
+    #header {background: none;}
+
     #logo {
 	    float: none;
 	    text-align: center;
+	    margin: 30px 0
     }
 
     .grid, 
@@ -2751,6 +2807,7 @@ BDO[DIR="rtl"] {
 	    font-size: 14px;
 	    padding: 7px 17px;
     }
+
 }
 
 @media screen and (max-width: 240px) {
@@ -2773,7 +2830,7 @@ BDO[DIR="rtl"] {
     .call-to-action a.button {
 	    font-size: 12px;
 	    padding: 5px 15px;
-    }
+    }    
     
     .top-widget area,
     .top-widget select,
@@ -2790,6 +2847,54 @@ BDO[DIR="rtl"] {
         line-height: 13px;
         text-align: center;
     }
+    
 }
 
 /*The last 29 days of the month are the hardest."- Nikola Tesla*/
+
+/* =Slider
+-------------------------------------------------------------- */
+
+#rslider{
+	padding: 5px;	
+	background: #323232;	
+}
+
+.bg-slider {
+	display: block;
+	width: 960px;
+	height: 68px;
+	background: url(images/slider-bottom.png) no-repeat center;		
+}
+
+.rslides {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.rslides li {
+	position: absolute;
+	display: none;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+.rslides li:first-child {
+	position: relative;
+	display: block;
+	float: left;
+}
+
+.rslides img {
+	display: block;
+	height: auto;
+	float: left;
+	width: 100%;
+	border: 0;
+	margin: 0
+}
