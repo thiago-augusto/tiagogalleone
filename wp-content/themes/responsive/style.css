@@ -1214,7 +1214,7 @@ form div {
 	border: 1px solid #d6d6d6;
 	border-radius: 6px;
 	clear: both;
-	margin: 20px auto 20px auto;
+	margin: 0px auto 20px auto;
 	padding: 0 20px 20px 20px;
 	position: relative;
 }
@@ -1460,6 +1460,16 @@ form div {
 	text-align: center;
 }
 
+/* =Page
+-------------------------------------------------------------- */
+
+.page h1.post-title{
+	font: normal 6em "Ithornët", Georgia, sans-serif;
+	text-align: right;
+	margin: 0;
+	text-shadow: 0 0 2px #000;
+}
+
 /* =bbPress
     bbPress has its own breadcrumb lists
 -------------------------------------------------------------- */
@@ -1694,7 +1704,7 @@ form div {
 	background-image: linear-gradient(top, #323232, #3d3d3d);
 	clear: both;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#323232, endColorstr=#3d3d3d);
-	margin: 0 auto;
+	margin: 0 auto;	
 }
 
 .menu, 
@@ -1702,14 +1712,16 @@ form div {
 	display: block;
 	list-style-type: none;
 	margin: 0;
-	padding: 0;
+	padding: 0;	
+	text-align: right;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;	
 	border-radius: 6px;
 }
 
 .menu li {
 	border: 0;
-	display: block;
-	float: left;
+	display: inline-block;
 	margin: 0;
 	padding: 0;
 	position: relative;
@@ -1719,6 +1731,9 @@ form div {
 .menu li:hover {
 	white-space: normal;
 	z-index: 10000;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;	
+	border-radius: 6px;
 }
 
 .menu li li {
@@ -1730,7 +1745,7 @@ form div {
 	position: absolute;
 	top: 0;
 	visibility: hidden;
-	z-index: 10;
+	z-index: 10;	
 }
 
 .menu li:hover > ul {
@@ -1750,7 +1765,7 @@ form div {
 	display: block;
 	height: 0;
 	overflow: hidden;
-	visibility: hidden;
+	visibility: hidden;	
 }
 
 .menu, 
@@ -1804,11 +1819,14 @@ form div {
 	background-image: -o-linear-gradient(top, #808080, #363636);
 	background-image: linear-gradient(top, #808080, #363636);
 	color: #fff;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#808080, endColorstr=#363636);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#808080, endColorstr=#363636);    
 }
 
 .menu .current_page_item a {
 	background-color: #343434;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;	
+	border-radius: 6px;
 }
 
 .home .menu .current_page_item a {
@@ -1816,6 +1834,9 @@ form div {
 	background-color: transparent;
     background-image: none;
     filter: none;
+    -webkit-border-radius: 6px;
+	-moz-border-radius: 6px;	
+	border-radius: 6px;    
 }
 
 .menu li li {
@@ -2136,7 +2157,12 @@ form div {
 -------------------------------------------------------------- */
 .breadcrumb-list {
 	font-size: 12px;
-	padding: 40px 0 0 0;
+	padding: 20px 0 0 0;
+	color: #fff
+}
+
+.breadcrumb-list a {
+	color: #fff;
 }
 
 /* =Comments
