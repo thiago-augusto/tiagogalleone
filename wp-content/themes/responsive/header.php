@@ -35,6 +35,14 @@ if ( !defined('ABSPATH')) exit;
 
 <?php wp_enqueue_style('responsive-style', get_stylesheet_uri(), false, '1.7.9');?>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="<?php bloginfo('template_url') ?>/slider/responsiveslides.min.js"></script>
+<script>
+    $(function () {
+        $(".rslides").responsiveSlides();
+    });
+</script>
+
 <?php wp_head(); ?>
 </head>
 
@@ -73,15 +81,16 @@ if ( !defined('ABSPATH')) exit;
             <span class="site-description"><?php bloginfo('description'); ?></span>
         </div><!-- end of #logo -->  
 
-    <?php endif; // header image was removed (again) ?>
-    
+    <?php endif; // header image was removed (again) ?>   
+
+
     <?php get_sidebar('top'); ?>
-			    
-				<?php wp_nav_menu(array(
+
+                <?php wp_nav_menu(array(
 				    'container'       => '',
 					'theme_location'  => 'header-menu')
 					); 
-				?>
+				?>               
                 
             <?php if (has_nav_menu('sub-header-menu', 'responsive')) { ?>
 	            <?php wp_nav_menu(array(
