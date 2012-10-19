@@ -86,6 +86,7 @@ if ( !defined('ABSPATH')) exit;
 
     <?php get_sidebar('top'); ?>
 
+    
                 <?php wp_nav_menu(array(
 				    'container'       => '',
 					'theme_location'  => 'header-menu')
@@ -100,10 +101,18 @@ if ( !defined('ABSPATH')) exit;
 					); 
 				?>
             <?php } ?>
+    
  
     </div><!-- end of #header -->
     <?php responsive_header_end(); // after header hook ?>
     
+
+<?php $options = get_option('responsive_theme_options'); ?>
+        <?php if ($options['breadcrumb'] == 0): ?>
+        <?php echo responsive_breadcrumb_lists(); ?>
+        <?php endif; ?>
+
+
 	<?php responsive_wrapper(); // before wrapper ?>
     <div id="wrapper" class="clearfix">
     <?php responsive_in_wrapper(); // wrapper hook ?>
