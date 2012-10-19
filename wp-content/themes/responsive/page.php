@@ -18,35 +18,33 @@ if ( !defined('ABSPATH')) exit;
  * @since          available since Release 1.0
  */
 ?>
-<?php get_header(); ?>
+<?php get_header(); ?>        
 
-        <div id="content" class="grid col-620">
+        <div id="content" class="grid col-940">
         
 <?php if (have_posts()) : ?>
 
 		<?php while (have_posts()) : the_post(); ?>
-        
-        <?php $options = get_option('responsive_theme_options'); ?>
-		<?php if ($options['breadcrumb'] == 0): ?>
-		<?php echo responsive_breadcrumb_lists(); ?>
-        <?php endif; ?>
-        
+
+                   
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
                 <h1 class="post-title"><?php the_title(); ?></h1>
- 
-                <?php if ( comments_open() ) : ?>               
+
+                <!--
                 <div class="post-meta">
-                <?php responsive_post_meta_data(); ?>
-                
-				    <?php if ( comments_open() ) : ?>
-                        <span class="comments-link">
-                        <span class="mdash">&mdash;</span>
-                    <?php comments_popup_link(__('No Comments &darr;', 'responsive'), __('1 Comment &darr;', 'responsive'), __('% Comments &darr;', 'responsive')); ?>
+                    <?php //responsive_post_meta_data(); ?>
+                </div>
+                -->
+
+                <?php if ( comments_open() ) : ?>                
+                    <?php if ( comments_open() ) : ?>
+                        <span class="comments-link">                        
+                            <?php comments_popup_link(__('No Comments &darr;', 'responsive'), __('1 Comment &darr;', 'responsive'), __('% Comments &darr;', 'responsive')); ?>
                         </span>
-                    <?php endif; ?> 
-                </div><!-- end of .post-meta -->
-                <?php endif; ?> 
-                
+                    <?php endif; ?>
+                <?php endif; ?>                
+                                
                 <div class="post-entry">
                     <?php the_content(__('Read more &#8250;', 'responsive')); ?>
                     <?php wp_link_pages(array('before' => '<div class="pagination">' . __('Pages:', 'responsive'), 'after' => '</div>')); ?>
@@ -84,5 +82,5 @@ if ( !defined('ABSPATH')) exit;
       
         </div><!-- end of #content -->
 
-<?php get_sidebar(); ?>
+<?php // get_sidebar(); ?>
 <?php get_footer(); ?>
