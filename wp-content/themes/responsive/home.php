@@ -198,6 +198,4 @@ if ( !defined('ABSPATH')) exit;
       
 </div><!-- end of #content -->
 
-
-
 <?php get_footer(); ?>
