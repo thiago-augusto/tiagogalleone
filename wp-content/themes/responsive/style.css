@@ -1704,7 +1704,8 @@ form div {
 	background-image: linear-gradient(top, #323232, #3d3d3d);
 	clear: both;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#323232, endColorstr=#3d3d3d);
-	margin: 0 auto;	
+	margin: 0 auto;
+	box-shadow: 0 12px 5px -9px #000;
 }
 
 .menu, 
@@ -1713,10 +1714,7 @@ form div {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;	
-	text-align: right;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;	
-	border-radius: 6px;
+	text-align: right;	
 }
 
 .menu li {
