@@ -38,8 +38,21 @@ if ( !defined('ABSPATH')) exit;
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="<?php bloginfo('template_url') ?>/slider/responsiveslides.min.js"></script>
 <script>
-    $(function () {
-        $(".rslides").responsiveSlides();
+    $(function () {      
+        $(".rslides").responsiveSlides({
+            auto: true,
+            pager: false,
+            nav: false,
+            speed: 500,
+        });
+        
+        $(".rslides2").responsiveSlides({
+            auto: false,
+            pager: true,
+            nav: false,
+            speed: 500,
+            maxwidth: "960",
+        });
     });
 </script>
 

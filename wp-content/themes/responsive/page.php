@@ -7,13 +7,13 @@ if ( !defined('ABSPATH')) exit;
  * Pages Template
  *
  *
- * @file           page.php
+ * @file           portifolio-page.php
  * @package        Responsive 
- * @author         Emil Uzelac 
+ * @author         Emil Uzelac / Thiago Augusto
  * @copyright      2003 - 2012 ThemeID
  * @license        license.txt
  * @version        Release: 1.0
- * @filesource     wp-content/themes/responsive/page.php
+ * @filesource     wp-content/themes/responsive/potifolio-page.php
  * @link           http://codex.wordpress.org/Theme_Development#Pages_.28page.php.29
  * @since          available since Release 1.0
  */

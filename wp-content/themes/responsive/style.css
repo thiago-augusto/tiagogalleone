@@ -1206,7 +1206,7 @@ form div {
 	max-width: 960px;
 	padding: 0px 25px;
 }
-
+/*
 #wrapper {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -1216,6 +1216,17 @@ form div {
 	clear: both;
 	margin: 0px auto 20px auto;
 	padding: 0 20px 20px 20px;
+	position: relative;
+}*/
+
+#wrapper {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	background-color: transparent;	
+	border-radius: 6px;
+	clear: both;
+	margin: 0px auto 20px auto;
+	padding: 0 0px 20px 0px;
 	position: relative;
 }
 
@@ -1463,10 +1474,11 @@ form div {
 /* =Page
 -------------------------------------------------------------- */
 
-.page h1.post-title{
+.page h1.post-title{	
 	font: normal 6em "Ithornët", Georgia, sans-serif;
+	color: #fff;
 	text-align: right;
-	margin: 0;
+	margin: 0 0 20px 0;
 	text-shadow: 0 0 2px #000;
 }
 
@@ -2915,4 +2927,97 @@ BDO[DIR="rtl"] {
 	width: 100%;
 	border: 0;
 	margin: 0
+}
+
+/* =Slider Page Portifolio
+-------------------------------------------------------------- */
+
+.rslides2 {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	margin: 0;	
+	background: #323232;	
+}
+
+.rslides2 li {
+	position: absolute;
+	display: none;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+.rslides2 li a{
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	display: block;
+	width: 960px;
+	text-indent: 20px;
+	padding: 20px 0;
+	color: white;
+	background: #323232;
+	opacity:0.8;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	-moz-opacity:0.8;
+	-khtml-opacity: 0.8;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.rslides2 li:first-child {
+	position: relative;
+	display: block;
+	float: left;
+}
+
+.rslides2 img {
+	display: block;
+	height: auto;
+	float: left;
+	width: 100%;
+	border: 0;
+	margin: 0;
+}
+
+.rslides_tabs {	
+	list-style: none;
+	margin: 30px 0 0 0;
+	padding: 0;
+}
+
+.rslides_tabs li{
+	display: inline-block;
+	border: 5px solid #fff;
+	margin: 0 15px;
+}
+
+.rslides1_s1, .rslides1_s2, .rslides1_s3, .rslides1_s4, .rslides1_s5 {	
+	width: 150px;
+	height: 100px;
+	display: block;
+	text-indent: -999999px;		
+}
+
+.rslides1_s1 {
+	background: url(slider/1_tcasamentos.jpg) no-repeat;	
+}
+
+.rslides1_s2 {
+	background: url(slider/2_tnoivas.jpg) no-repeat;	
+}
+
+.rslides1_s3 {
+	background: url(slider/3_tromantico.jpg) no-repeat;	
+}
+
+.rslides1_s4 {
+	background: url(slider/4_tmakingoff.jpg) no-repeat;	
+}
+
+.rslides1_s5 {
+	background: url(slider/5_tdetalhe.jpg) no-repeat;	
 }

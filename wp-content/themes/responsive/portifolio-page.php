@@ -4,16 +4,17 @@
 if ( !defined('ABSPATH')) exit;
 
 /**
- * Pages Template
+ * Full Content Template
  *
+   Template Name:  Portifólio Page (no sidebar)
  *
- * @file           page.php
+ * @file           portifolio-page.php
  * @package        Responsive 
- * @author         Emil Uzelac 
- * @copyright      2003 - 2012 ThemeID
+ * @author         Emil Uzelac / Thiago Augusto 
+ * @copyright      2003 - 2011 ThemeID
  * @license        license.txt
  * @version        Release: 1.0
- * @filesource     wp-content/themes/responsive/page.php
+ * @filesource     wp-content/themes/responsive/portifolio-page.php
  * @link           http://codex.wordpress.org/Theme_Development#Pages_.28page.php.29
  * @since          available since Release 1.0
  */
@@ -31,11 +32,30 @@ if ( !defined('ABSPATH')) exit;
 
                 <h1 class="post-title"><?php the_title(); ?></h1>
 
-                <!--
-                <div class="post-meta">
-                    <?php //responsive_post_meta_data(); ?>
+                <div id="portifolio">
+                    <ul class="rslides2">
+                        <li>
+                            <? echo '<img class="aligncenter" src="'.get_stylesheet_directory_uri().'/slider/1_casamentos.jpg" />'; ?>
+                            <a href="#">Cerimônia</a>
+                        </li>
+                        <li>
+                            <? echo '<img class="aligncenter" src="'.get_stylesheet_directory_uri().'/slider/2_noivas.jpg" />'; ?>
+                            <a href="#">Ensaio Noiva</a>
+                        </li>
+                        <li>
+                            <? echo '<img class="aligncenter" src="'.get_stylesheet_directory_uri().'/slider/3_romantico.jpg" />'; ?>
+                            <a href="#">Ensaio Romântico</a>
+                        </li>
+                        <li>
+                            <? echo '<img class="aligncenter" src="'.get_stylesheet_directory_uri().'/slider/4_making-off.jpg" />'; ?>
+                            <a href="#">Making Off</a>
+                        </li>
+                        <li>
+                            <? echo '<img class="aligncenter" src="'.get_stylesheet_directory_uri().'/slider/5_detalhe.jpg" />'; ?>
+                            <a href="#">Recepção e Detalhe</a>
+                        </li>
+                    </ul>               
                 </div>
-                -->
 
                 <?php if ( comments_open() ) : ?>                
                     <?php if ( comments_open() ) : ?>
