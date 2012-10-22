@@ -1821,20 +1821,14 @@ form div {
 }
 
 .menu .current_page_item a {
-	background-color: #343434;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;	
-	border-radius: 6px;
+	background-color: #343434;	
 }
 
 .home .menu .current_page_item a {
     background: none;
 	background-color: transparent;
     background-image: none;
-    filter: none;
-    -webkit-border-radius: 6px;
-	-moz-border-radius: 6px;	
-	border-radius: 6px;    
+    filter: none;    
 }
 
 .menu li li {
